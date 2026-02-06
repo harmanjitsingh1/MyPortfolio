@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Dev | Full Stack Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                primary: "#B6F829", // Neon Green
+                secondary: "#8EDC1F", // Soft Green
+                glow: "#C7FF3D",
+                dark: "#0B0B0B", // Main BG
+                surface: "#121212", // Cards
+                border: "#1F1F1F",
+                muted: "#A1A1AA",
+              },
+              background: "#0B0B0B",
+              foreground: "#FFFFFF",
+              card: {
+                DEFAULT: "#121212",
+                foreground: "#FFFFFF",
+              },
+              popover: {
+                DEFAULT: "#121212",
+                foreground: "#FFFFFF",
+              },
+              primary: {
+                DEFAULT: "#B6F829",
+                foreground: "#0B0B0B",
+              },
+              secondary: {
+                DEFAULT: "#1F1F1F",
+                foreground: "#FFFFFF",
+              },
+              muted: {
+                DEFAULT: "#27272a",
+                foreground: "#a1a1aa",
+              },
+              accent: {
+                DEFAULT: "#27272a",
+                foreground: "#FFFFFF",
+              },
+              destructive: {
+                DEFAULT: "#ef4444",
+                foreground: "#FFFFFF",
+              },
+              border: "#1F1F1F",
+              input: "#1F1F1F",
+              ring: "#B6F829",
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            backgroundImage: {
+              "glow-gradient":
+                "radial-gradient(circle at center, rgba(182, 248, 41, 0.15) 0%, transparent 70%)",
+            },
+            animation: {
+              "move-up": "move-up 60s linear infinite",
+              "fade-in-up": "fade-in-up 0.5s ease-out forwards",
+            },
+            keyframes: {
+              "move-up": {
+                "0%": { transform: "translateY(0)" },
+                "100%": { transform: "translateY(-100vh)" },
+              },
+              "fade-in-up": {
+                "0%": { opacity: "0", transform: "translateY(10px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0b0b0b;
+        color: #ffffff;
+      }
+      /* Custom scrollbar for premium feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0b0b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f1f1f;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.3.1",
+          "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1",
+          "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+          "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1",
+          "clsx": "https://esm.sh/clsx@2.1.0",
+          "tailwind-merge": "https://esm.sh/tailwind-merge@2.2.1",
+          "embla-carousel-react": "https://esm.sh/embla-carousel-react@8.0.0?deps=react@18.3.1",
+          "embla-carousel-auto-scroll": "https://esm.sh/embla-carousel-auto-scroll@8.0.0?deps=embla-carousel@8.0.0",
+          "embla-carousel": "https://esm.sh/embla-carousel@8.0.0",
+          "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@1.0.2?deps=react@18.3.1",
+          "class-variance-authority": "https://esm.sh/class-variance-authority@0.7.0",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+          "react/": "https://esm.sh/react@^19.2.4/"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
