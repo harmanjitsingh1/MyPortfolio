@@ -27,9 +27,46 @@ export default defineConfig(({ mode }) => {
           theme_color: "#0A0A0A",
           icons: [
             {
-              src: "pwa-icon.svg",
-              sizes: "192x192 512x512",
-              type: "image/svg+xml",
+              src: "/icons/icon-48.png",
+              sizes: "48x48",
+              type: "image/png",
+            },
+            {
+              src: "/icons/icon-72.png",
+              sizes: "72x72",
+              type: "image/png",
+            },
+            {
+              src: "/icons/icon-96.png",
+              sizes: "96x96",
+              type: "image/png",
+            },
+            {
+              src: "/icons/icon-128.png",
+              sizes: "128x128",
+              type: "image/png",
+            },
+            {
+              src: "/icons/icon-192.png",
+              sizes: "192x192",
+              type: "image/png",
+            },
+            {
+              src: "/icons/icon-512.png",
+              sizes: "512x512",
+              type: "image/png",
+            },
+            {
+              src: "/icons/maskable-icon-512x512.png",
+              sizes: "512x512",
+              type: "image/png",
+              purpose: "maskable",
+            },
+            {
+              src: "/icons/monochrome-icon-512x512.png",
+              sizes: "512x512",
+              type: "image/png",
+              purpose: "monochrome",
             },
           ],
         },
