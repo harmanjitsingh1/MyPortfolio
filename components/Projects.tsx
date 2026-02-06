@@ -4,11 +4,11 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "FinTech Dashboard",
-    desc: "A comprehensive financial analytics dashboard for enterprise clients featuring real-time data visualization.",
-    tags: ["Next.js", "TypeScript", "D3.js"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    title: "Document Exchange App",
+    desc: "A secure platform for seamless document sharing and collaboration, featuring real-time updates and version control.",
+    tags: ["React", "Node.js", "Secure"],
+    image: "/projects/doc-exchange-1.png",
+    image2: "/projects/doc-exchange-2.png", // Hover image
   },
   {
     title: "E-commerce Platform",
@@ -16,6 +16,7 @@ const projects = [
     tags: ["React", "Node.js", "Stripe"],
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    image2: undefined,
   },
   {
     title: "AI Content Generator",
@@ -23,6 +24,7 @@ const projects = [
     tags: ["OpenAI API", "Tailwind", "Svelte"],
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    image2: undefined,
   },
   {
     title: "Health Tracking App",
@@ -30,6 +32,7 @@ const projects = [
     tags: ["PWA", "Firebase", "React"],
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+    image2: undefined,
   },
 ];
 
@@ -62,13 +65,21 @@ const Projects: React.FC = () => {
               key={index}
               className="group relative rounded-xl overflow-hidden border border-brand-border bg-brand-surface hover:border-brand-primary/50 transition-all duration-300"
             >
-              {/* Image */}
-              <div className="aspect-video overflow-hidden">
+              {/* Image Container with Hover Effect */}
+              <div className="aspect-video overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+
+                {project.image2 && (
+                  <img
+                    src={project.image2}
+                    alt={`${project.title} - Hover Preview`}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+                  />
+                )}
               </div>
 
               {/* Content */}
