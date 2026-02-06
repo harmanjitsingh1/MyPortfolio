@@ -40,7 +40,7 @@ const techStack = [
 
 export const TrustedBrands = () => {
   return (
-    <section className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] select-none pointer-events-none overflow-hidden md:pb-10">
+    <section className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] select-none pointer-events-none overflow-hidden md:pb-10 md:pt-20">
       <div className="container mx-auto flex flex-col items-center text-center mb-8">
         <h3 className="text-sm md:text-lg font-bold tracking-[0.3em] text-brand-primary uppercase opacity-80 drop-shadow-[0_0_10px_rgba(182,248,41,0.5)]">
           Powered By Modern Technologies
