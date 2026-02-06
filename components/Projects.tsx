@@ -1,14 +1,18 @@
 import React from "react";
 import Card from "./Card";
 import { ExternalLink, Github } from "lucide-react";
+import docExchange1 from "@/assets/doc-exchange-1.png";
+import docExchange2 from "@/assets/doc-exchange-2.png";
 
 const projects = [
   {
     title: "Document Exchange App",
     desc: "A secure platform for seamless document sharing and collaboration, featuring real-time updates and version control.",
-    tags: ["React", "Node.js", "Secure"],
-    image: "/projects/doc-exchange-1.png",
-    image2: "/projects/doc-exchange-2.png", // Hover image
+    tags: ["React", "Node.js", "Supabase"],
+    image: docExchange1,
+    image2: docExchange2, // Hover image
+    gitHub: "https://github.com/harmanjitsingh1/xCHnG-Mine",
+    live: "https://exchange-pearl-sigma.vercel.app",
   },
   {
     title: "E-commerce Platform",
@@ -90,15 +94,17 @@ const Projects: React.FC = () => {
                   </h3>
                   <div className="flex gap-3">
                     <a
-                      href="#"
+                      href={project.gitHub}
+                      target="_blank"
                       className="p-2 rounded-full bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-colors"
                     >
                       <Github className="w-5 h-5" />
                     </a>
                     <a
-                      href="#"
+                      href={project.live}
+                      target="_blank"
                       className="p-2 rounded-full bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-colors"
-                    >
+                      >
                       <ExternalLink className="w-5 h-5" />
                     </a>
                   </div>
@@ -109,8 +115,8 @@ const Projects: React.FC = () => {
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
-                      key={tag}
-                      className="px-3 py-1 text-xs font-medium rounded-full bg-brand-dark border border-brand-border text-brand-muted uppercase tracking-wide"
+                    key={tag}
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-brand-dark border border-brand-border text-brand-muted uppercase tracking-wide"
                     >
                       {tag}
                     </span>
