@@ -23,6 +23,7 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({
     setIsOpen(true);
     document.body.style.overflow = "hidden";
   }, []);
+  
   const closeModal = useCallback(() => {
     setIsOpen(false);
     document.body.style.overflow = "auto";

@@ -40,11 +40,20 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-6">Connect</h4>
             <div className="flex gap-4">
-              {[Twitter, Linkedin, Github, Mail].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
-                  <Icon className="w-5 h-5" />
+              {/* {[Twitter, Linkedin, Github, Mail].map((Icon, i) => ( */}
+                <a target='main' className="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
+                  <Twitter className="w-5 h-5" />
                 </a>
-              ))}
+                <a href="https://linkedin.com/in/harmanjit-singh119b74259" target='main' className="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://github.com/harmanjitsingh1" target='main' className="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="mailto:harmanjitsingh3002@gmail.com" target='main' className="w-10 h-10 rounded-full bg-brand-dark border border-brand-border flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300">
+                  <Mail className="w-5 h-5" />
+                </a>
+              {/* ))} */}
             </div>
           </div>
         </div>

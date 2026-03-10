@@ -3,11 +3,12 @@ import { ArrowRight, Download, Terminal, Code2, Globe } from "lucide-react";
 import Button from "./Button";
 import { TrustedBrands } from "./TrustedBrands";
 import Background from "./Background";
+import { useModal } from "@/context/ModalContext";
 
 const Hero: React.FC = () => {
   const [text, setText] = useState("");
   const fullText = "Full Stack Engineer";
-  // const { openModal } = useModal(); // This import and usage is commented out in the provided snippet, so I'll keep it out.
+  const { openModal } = useModal(); // This import and usage is commented out in the provided snippet, so I'll keep it out.
 
   useEffect(() => {
     let currentIndex = 0;
@@ -132,15 +133,15 @@ const Hero: React.FC = () => {
 
           <div>
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center animate-fade-in-up [animation-delay:600ms]">
-              <a href="#projects" className="w-auto">
-                <Button className="w-auto">
+              <Button className="w-auto" onClick={openModal}>
+                Let's Connect
+              </Button>
+
+              <a href="#projects">
+                <Button variant="secondary" className="w-auto">
                   View My Work <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
-
-              <Button variant="secondary" className="w-auto">
-                Download Resume <Download className="w-4 h-4 ml-2" />
-              </Button>
             </div>
 
             <div className="mt-12 flex items-center justify-center gap-8 text-brand-muted animate-fade-in-up [animation-delay:800ms]">

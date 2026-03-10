@@ -1,5 +1,13 @@
-import React, { useState, FormEvent } from "react";
-import { X, Send, User, Mail, MessageSquare, Sparkles, Unplug } from "lucide-react";
+import React, { useState, FormEvent, useEffect } from "react";
+import {
+  X,
+  Send,
+  User,
+  Mail,
+  MessageSquare,
+  Sparkles,
+  Unplug,
+} from "lucide-react";
 import { useModal } from "../context/ModalContext";
 import { useToast } from "../context/ToastContext";
 import Button from "./Button";
@@ -59,6 +67,17 @@ const ContactModal: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, closeModal]);
 
   if (!isOpen) return null;
 

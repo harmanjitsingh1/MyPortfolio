@@ -55,7 +55,8 @@ const Projects: React.FC = () => {
             </p>
           </div>
           <a
-            href="#"
+            href="https://github.com/harmanjitsingh1"
+            target="main"
             className="text-brand-primary font-semibold hover:underline decoration-2 underline-offset-4"
           >
             View Github Profile &rarr;
