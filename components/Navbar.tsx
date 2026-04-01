@@ -24,8 +24,9 @@ const Navbar: React.FC = () => {
             <div className="w-8 h-8 rounded-lg bg-brand-primary flex items-center justify-center text-brand-dark group-hover:scale-105 transition-transform">
               <Terminal className="w-4 h-4 font-bold" />
             </div>
-            <span className="font-bold text-md md:text-lg tracking-tight text-white">
-              Hex.Dev
+
+            <span className="font-bold text-md md:text-lg tracking-tight text-white whitespace-nowrap">
+              Harmanjit Singh
             </span>
           </div>
 

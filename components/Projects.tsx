@@ -1,43 +1,45 @@
 import React from "react";
 import Card from "./Card";
 import { ExternalLink, Github } from "lucide-react";
-import docExchange1 from "@/assets/doc-exchange-1.png";
-import docExchange2 from "@/assets/doc-exchange-2.png";
+import docExchange1 from "@/assets/doc-exchange-2.png";
+import docExchange2 from "@/assets/doc-exchange-1.png";
+import serviceHive1 from "@/assets/service-hive.png";
 
 const projects = [
   {
-    title: "Document Exchange App",
+    title: "ServiceHive - Service Booking Platform",
+    desc: "A service booking platform for users to book local services provided by service providers.",
+    tags: ["React", "Node.js", "Stripe"],
+    image: serviceHive1,
+    image2: undefined,
+    gitHub: "https://github.com/harmanjitsingh1/ServiceHive",
+    live: "https://service-hive.vercel.app",
+  },
+  {
+    title: "xCHnG - A Document Exchange App",
     desc: "A secure platform for seamless document sharing and collaboration, featuring real-time updates and version control.",
-    tags: ["React", "Node.js", "Supabase"],
+    tags: ["React", "PWA", "Node.js", "Supabase"],
     image: docExchange1,
-    image2: docExchange2, // Hover image
+    image2: docExchange2,
     gitHub: "https://github.com/harmanjitsingh1/xCHnG-Mine",
     live: "https://exchange-pearl-sigma.vercel.app",
   },
   {
-    title: "E-commerce Platform",
-    desc: "Headless e-commerce solution with Shopify integration, supporting 10k+ concurrent users.",
-    tags: ["React", "Node.js", "Stripe"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    image2: undefined,
-  },
-  {
-    title: "AI Content Generator",
+    title: "AI Headshot Generator",
     desc: "SaaS application leveraging LLMs to help marketers generate blog content 10x faster.",
     tags: ["OpenAI API", "Tailwind", "Svelte"],
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
     image2: undefined,
   },
-  {
-    title: "Health Tracking App",
-    desc: "Mobile-first progressive web app for tracking daily fitness and nutrition goals.",
-    tags: ["PWA", "Firebase", "React"],
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
-    image2: undefined,
-  },
+  // {
+  //   title: "Health Tracking App",
+  //   desc: "Mobile-first progressive web app for tracking daily fitness and nutrition goals.",
+  //   tags: ["PWA", "Firebase", "React"],
+  //   image:
+  //     "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+  //   image2: undefined,
+  // },
 ];
 
 const Projects: React.FC = () => {
@@ -63,61 +65,66 @@ const Projects: React.FC = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[120%] w-[120%] bg-brand-primary/10 blur-[120px] rounded-full opacity-70 z-0" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative max-w-sm sm:max-w-none mx-auto">
+          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] h-[120%] w-[120%] bg-brand-primary/10 blur-[120px] rounded-full opacity-70 z-0 pointer-events-none" />
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative rounded-xl overflow-hidden border border-brand-border bg-brand-surface hover:border-brand-primary/50 transition-all duration-300"
+              className="group relative flex flex-col rounded-2xl overflow-hidden border border-brand-border bg-brand-surface hover:border-brand-primary/40 hover:shadow-[0_8px_30px_rgba(182,248,41,0.12)] transition-all duration-500 transform hover:-translate-y-1.5"
             >
               {/* Image Container with Hover Effect */}
-              <div className="aspect-video overflow-hidden relative">
+              <div className="aspect-video overflow-hidden relative border-b border-brand-border/50 bg-[#0A0A0A]">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
                 {project.image2 && (
                   <img
                     src={project.image2}
                     alt={`${project.title} - Hover Preview`}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-110"
                   />
                 )}
+                
+                {/* Overlay gradient for cooler look */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-surface/95 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-brand-primary transition-colors">
+              <div className="p-5 flex flex-col flex-grow z-10 bg-brand-surface relative">
+                <div className="flex justify-between items-start mb-3 gap-3">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary transition-colors leading-snug line-clamp-2">
                     {project.title}
                   </h3>
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 shrink-0">
                     <a
                       href={project.gitHub}
                       target="_blank"
-                      className="p-2 rounded-full bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-colors"
+                      className="p-1.5 rounded-lg bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-all shadow-sm"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-4 h-4" />
                     </a>
                     <a
                       href={project.live}
                       target="_blank"
-                      className="p-2 rounded-full bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-colors"
-                      >
-                      <ExternalLink className="w-5 h-5" />
+                      className="p-1.5 rounded-lg bg-brand-dark border border-brand-border hover:bg-brand-primary hover:text-brand-dark hover:border-brand-primary transition-all shadow-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
 
-                <p className="text-brand-muted mb-6">{project.desc}</p>
+                <p className="text-sm text-brand-muted mb-6 flex-grow line-clamp-3">
+                  {project.desc}
+                </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag) => (
                     <span
-                    key={tag}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-brand-dark border border-brand-border text-brand-muted uppercase tracking-wide"
+                      key={tag}
+                      className="px-2.5 py-1 text-[10px] font-bold rounded-md bg-brand-dark border border-brand-border/60 text-brand-muted uppercase tracking-wider shadow-sm"
                     >
                       {tag}
                     </span>

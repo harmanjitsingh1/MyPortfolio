@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
+import AboutMe from "./components/AboutMe";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
@@ -51,7 +52,8 @@ const App: React.FC = () => {
             <TrustedBrands />
             <Services />
             <Projects />
-            <Testimonials />
+            <AboutMe />
+            {/* <Testimonials /> */}
             <Pricing />
             <FAQ />
             <CallToAction />

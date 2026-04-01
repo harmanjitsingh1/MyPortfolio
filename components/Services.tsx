@@ -6,19 +6,19 @@ import Card from "./Card";
 const services = [
   {
     icon: Layout,
-    title: "Frontend Development",
-    desc: "Pixel-perfect, responsive interfaces using React, Next.js, and Tailwind CSS.",
+    title: "Web App Development",
+    desc: "Pixel-perfect, optimized Web Apps using React, Next.js, and Tailwind CSS.",
   },
   {
     icon: Zap,
     title: "Performance Optimization",
     desc: "Enhancing core web vitals and reducing load times for better SEO and UX.",
   },
-  {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    desc: "Cross-platform mobile applications built with React Native.",
-  },
+  // {
+  //   icon: Smartphone,
+  //   title: "Mobile App Development",
+  //   desc: "Cross-platform mobile applications built with React Native.",
+  // },
   {
     icon: Search,
     title: "Technical SEO",
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
   return (
     <section
       id="services"
-      className="py-24 md:py-32 px-6 bg-brand-dark relative"
+      className="py-16 md:py-32 px-6 bg-brand-dark relative"
     >
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Left Column: Sticky Info */}

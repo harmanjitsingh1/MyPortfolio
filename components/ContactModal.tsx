@@ -7,6 +7,8 @@ import {
   MessageSquare,
   Sparkles,
   Unplug,
+  Linkedin,
+  Github,
 } from "lucide-react";
 import { useModal } from "../context/ModalContext";
 import { useToast } from "../context/ToastContext";
@@ -90,21 +92,24 @@ const ContactModal: React.FC = () => {
       />
 
       {/* Modal Content */}
-      <div className="relative w-full max-w-[450px] bg-[#0A0A0A] border border-brand-border/20 rounded-[2rem] p-8 animate-fade-in-up flex flex-col items-center shadow-[0_0_30px_rgba(182,248,41,0.15)]">
+      <div className="relative w-full max-w-[450px] bg-[#0A0A0A] border border-brand-border/20 rounded-[2rem] p-8 max-h-[90vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] animate-fade-in-up flex flex-col items-center shadow-[0_0_30px_rgba(182,248,41,0.15)]">
         <button
           onClick={closeModal}
-          className="absolute top-5 right-6 text-brand-muted hover:text-white transition-colors"
+          className="absolute top-5 right-6 text-brand-muted hover:text-white transition-colors z-10"
         >
           <X className="w-5 h-5" />
         </button>
 
-        {/* Glowing Icon */}
-        <div className="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(182,248,41,0.2)]">
-          <Unplug className="w-8 h-8 text-brand-primary fill-brand-primary" />
-        </div>
-
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-white">Let's Connect</h2>
+        <div className="text-center w-full mb-8 pt-2">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            {/* Glowing Icon */}
+            <div className="w-12 h-12 shrink-0 rounded-full bg-brand-primary/10 flex items-center justify-center shadow-[0_0_30px_rgba(182,248,41,0.2)]">
+              <Unplug className="w-6 h-6 text-brand-primary fill-brand-primary" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-0">
+              Let's Connect
+            </h2>
+          </div>
           <p className="text-brand-muted text-sm max-w-[260px] mx-auto">
             Ready to start your project? Fill out the form below and I'll get
             back to you.
@@ -191,6 +196,41 @@ const ContactModal: React.FC = () => {
             )}
           </Button>
         </form>
+
+        {/* Social Options */}
+        <div className="mt-8 flex items-center gap-4 w-full">
+          <div className="h-px bg-brand-border/30 flex-1"></div>
+          <span className="text-xs text-brand-muted font-medium uppercase tracking-wider">
+            Or
+          </span>
+          <div className="h-px bg-brand-border/30 flex-1"></div>
+        </div>
+
+        <div className="flex gap-4 mt-6 justify-center">
+          <a
+            href="mailto:harmanjitsingh3002@gmail.com"
+            className="w-12 h-12 rounded-full bg-[#151515] border border-brand-border/40 flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(182,248,41,0.3)]"
+          >
+            <Mail className="w-5 h-5" />
+          </a>
+
+          <a
+            href="https://in.linkedin.com/in/harmanjitsingh4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-[#151515] border border-brand-border/40 flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(182,248,41,0.3)]"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
+          <a
+            href="https://github.com/harmanjitsingh1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-[#151515] border border-brand-border/40 flex items-center justify-center text-brand-muted hover:text-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(182,248,41,0.3)]"
+          >
+            <Github className="w-5 h-5" />
+          </a>
+        </div>
       </div>
     </div>
   );

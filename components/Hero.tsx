@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center md:pt-20 overflow-hidden">
+    <section className="relative min-h-screen pt-28 pb-16 md:pt-32 md:pb-20 flex flex-col justify-center overflow-hidden">
       <Background />
 
       <div className="container mx-auto relative z-10 max-w-[1200px]">
@@ -71,21 +71,21 @@ const Hero: React.FC = () => {
                 interfaces.
               </p>
             </div>
-            <div className="flex-1 relative animate-fade-in-up [animation-delay:400ms] hidden lg:block">
-              <div className="relative w-full  max-w-[500px] mx-auto">
+            <div className="flex-1 relative animate-fade-in-up [animation-delay:400ms] w-full px-4 sm:px-0">
+              <div className="relative w-full max-w-[500px] mx-auto">
                 <div className="absolute top-20 left-0 right-0 mx-auto w-full h-full bg-gradient-to-tr from-brand-primary/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-                <div className="relative bg-[#0A0A0A] border border-brand-border rounded-2xl p-6 shadow-2xl">
-                  <div className="flex items-center gap-2 mb-4 border-b border-brand-border pb-4">
+                <div className="relative bg-[#0A0A0A] border border-brand-border rounded-2xl p-4 md:p-6 shadow-2xl overflow-x-auto">
+                  <div className="flex items-center gap-2 mb-4 border-b border-brand-border pb-4 min-w-[250px]">
                     <div className="flex gap-1.5">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <div className="text-xs text-brand-muted font-mono ml-2">
+                    <div className="text-sm text-brand-muted font-mono ml-2">
                       developer.tsx
                     </div>
                   </div>
-                  <div className="font-mono text-sm space-y-2">
+                  <div className="font-mono text-sm sm:text-base md:text-lg space-y-2 min-w-[280px]">
                     <div className="text-gray-400">
                       // Building the future needed
                     </div>
@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            <div className="mt-12 flex items-center justify-center gap-8 text-brand-muted animate-fade-in-up [animation-delay:800ms]">
+            <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 text-brand-muted animate-fade-in-up [animation-delay:800ms]">
               <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm">
                 <Terminal className="w-5 h-5 text-brand-primary" />
                 <span>Clean Code</span>
