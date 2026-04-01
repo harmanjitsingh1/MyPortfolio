@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "http://www.harman.linkpc.net",
-      "permanent": true
-    }
-  ]
-}
