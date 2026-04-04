@@ -4,6 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import docExchange1 from "@/assets/doc-exchange-2.png";
 import docExchange2 from "@/assets/doc-exchange-1.png";
 import serviceHive1 from "@/assets/service-hive.png";
+import proPortrait from "@/assets/pro-portrait.png";
 
 const projects = [
   {
@@ -25,12 +26,13 @@ const projects = [
     live: "https://exchange-pearl-sigma.vercel.app",
   },
   {
-    title: "AI Headshot Generator",
+    title: "ProPortrait - AI Headshot Generator",
     desc: "SaaS application leveraging LLMs to help marketers generate blog content 10x faster.",
-    tags: ["OpenAI API", "Tailwind", "Svelte"],
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
+    tags: ["Gemini AI API", "Supabase", "React.js"],
+    image: proPortrait,
     image2: undefined,
+    gitHub: "https://github.com/harmanjitsingh1/ProPortrait",
+    live: "https://pro-portrait.vercel.app/"
   },
   // {
   //   title: "Health Tracking App",
